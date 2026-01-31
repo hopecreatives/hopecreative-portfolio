@@ -1,6 +1,9 @@
 [build]
   command = ""
 
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_DISABLED = "true"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
