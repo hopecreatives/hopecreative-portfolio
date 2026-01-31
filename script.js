@@ -18,12 +18,12 @@ const images = [
     { id: 16, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 16' },
     { id: 17, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 17' },
     { id: 18, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 18' },
-    { id: 19, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 19' },
-    { id: 20, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 20' },
+    { id: 19, src: 'https://www.dropbox.com/scl/fi/n0bf0z3qw238y3rgb89r5/Photo-019.jpg?rlkey=7relz4f4n62pwkr8ek5wxnhif&st=za27uitj&dl=1', title: 'Premium Shot 19' },
+    { id: 20, src: 'https://www.dropbox.com/scl/fi/71jn67s6h2rkf2eobc19l/Photo-020.jpg?rlkey=tz1y4fuuvrp417mvd9wo0vww3&st=6l8jkbjx&dl=1', title: 'Premium Shot 20' },
     { id: 21, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 21' },
-    { id: 22, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 22' },
-    { id: 23, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 23' },
-    { id: 24, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 24' },
+    { id: 22, src: 'https://www.dropbox.com/scl/fi/toc4fky4gxgwyeu888atp/Photo-022.jpg?rlkey=xi2p3n02rhs9dtt62gz3mu5ns&st=9cxdg14q&dl=1', title: 'Premium Shot 22' },
+    { id: 23, src: 'https://www.dropbox.com/scl/fi/1jdkntt4xk23a72w1rgvo/Photo-023.jpg?rlkey=mnc755b7k8o5abh4g4eeegcc9&st=yyj155zt&dl=1', title: 'Premium Shot 23' },
+    { id: 24, src: 'https://www.dropbox.com/scl/fi/omm89j74dthkq93brxgkk/Photo-024.jpg?rlkey=br4ad5nzl6arbqtngxgwkj9rk&st=mzjlht7w&dl=1', title: 'Premium Shot 24' },
 ];
 
 let currentLightboxIndex = 0;
