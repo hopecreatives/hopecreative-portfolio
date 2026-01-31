@@ -4,15 +4,15 @@ import { assertAdmin } from '@/lib/adminAuth'
 
 export const runtime = 'nodejs'
 
-function getPublicId(params: { publicId?: string[] | string }) {
-  if (!params.publicId) return ''
-  return Array.isArray(params.publicId) ? params.publicId.join('/') : params.publicId
+function getPublicId(params: { publicId: string[] }) {
+  return params.publicId.join('/')
 }
 
 export async function PATCH(
   request: Request,
-  { params }: { params: { publicId?: string[] | string } }
+  context: { params: Promise<{ publicId: string[] }> }
 ) {
+  const { params } = await context
   const auth = assertAdmin(request)
   if (!auth.ok) {
     return NextResponse.json({ error: auth.error }, { status: 401 })
@@ -68,8 +68,9 @@ export async function PATCH(
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { publicId?: string[] | string } }
+  context: { params: Promise<{ publicId: string[] }> }
 ) {
+  const { params } = await context
   const auth = assertAdmin(request)
   if (!auth.ok) {
     return NextResponse.json({ error: auth.error }, { status: 401 })
