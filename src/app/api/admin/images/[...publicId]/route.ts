@@ -1,15 +1,18 @@
 import { NextResponse } from 'next/server'
 import { getCloudinary } from '@/lib/cloudinary'
 import { assertAdmin } from '@/lib/adminAuth'
-import type { NextRequest } from 'next/server'
 
 export const runtime = 'nodejs'
 
-function getPublicId(params: { publicId: string[] }) {
-  return params.publicId.join('/')
+function getPublicId(params: { publicId?: string[] | string }) {
+  if (!params.publicId) return ''
+  return Array.isArray(params.publicId) ? params.publicId.join('/') : params.publicId
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { publicId: string[] } }) {
+export async function PATCH(
+  request: Request,
+  { params }: { params: { publicId?: string[] | string } }
+) {
   const auth = assertAdmin(request)
   if (!auth.ok) {
     return NextResponse.json({ error: auth.error }, { status: 401 })
@@ -63,7 +66,10 @@ export async function PATCH(request: NextRequest, { params }: { params: { public
   }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { publicId: string[] } }) {
+export async function DELETE(
+  request: Request,
+  { params }: { params: { publicId?: string[] | string } }
+) {
   const auth = assertAdmin(request)
   if (!auth.ok) {
     return NextResponse.json({ error: auth.error }, { status: 401 })
