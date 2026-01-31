@@ -16,7 +16,7 @@ const images = [
     { id: 14, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANjETsPDUadBcPiaLSEG7Ms/Photo-014.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 14' },
     { id: 15, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/AKHdV0oMB-N6ou4sY0NkBxw/Photo-015.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 15' },
     { id: 16, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 16' },
-    { id: 17, src: 'https://www.dropbox.com/scl/fo/u8xxdn01tt6awof7u0hca/ANQgAGQKEwR9ZkP6P0ZcXcM/Photo-016.jpg?rlkey=wtj3m2t2tdqpkq262z5gyhktf&dl=1', title: 'Premium Shot 17' },
+    { id: 17, src: 'https://www.dropbox.com/scl/fi/i4w1syr90nt4pg8mzg2yo/Photo-017.jpg?rlkey=0o7uvhfzepb53omif6d0wwalg&st=hcnq6gfh&dl=1', title: 'Premium Shot 17' },
     { id: 18, src: 'https://www.dropbox.com/scl/fi/lvehdspdiztwgd1bkzvh4/Photo-018.jpg?rlkey=32e8boxcjc0iganshkrbmyxzk&st=olosx770&dl=1', title: 'Premium Shot 18' },
     { id: 19, src: 'https://www.dropbox.com/scl/fi/n0bf0z3qw238y3rgb89r5/Photo-019.jpg?rlkey=7relz4f4n62pwkr8ek5wxnhif&st=za27uitj&dl=1', title: 'Premium Shot 19' },
     { id: 20, src: 'https://www.dropbox.com/scl/fi/71jn67s6h2rkf2eobc19l/Photo-020.jpg?rlkey=tz1y4fuuvrp417mvd9wo0vww3&st=6l8jkbjx&dl=1', title: 'Premium Shot 20' },
