@@ -20,6 +20,10 @@ const images = [
     { id: 18, src: 'public/assets/images/photo-18.jpg', title: 'Premium Shot 18' },
     { id: 19, src: 'public/assets/images/photo-19.jpg', title: 'Premium Shot 19' },
     { id: 20, src: 'public/assets/images/photo-20.jpg', title: 'Premium Shot 20' },
+    { id: 21, src: 'public/assets/images/photo-21.jpg', title: 'Premium Shot 21' },
+    { id: 22, src: 'public/assets/images/photo-22.jpg', title: 'Premium Shot 22' },
+    { id: 23, src: 'public/assets/images/photo-23.jpg', title: 'Premium Shot 23' },
+    { id: 24, src: 'public/assets/images/photo-24.jpg', title: 'Premium Shot 24' },
 ];
 
 let currentLightboxIndex = 0;
@@ -29,15 +33,16 @@ let currentGalleryImages = [];
 document.addEventListener('DOMContentLoaded', () => {
     loadGallery();
     setupEventListeners();
+    setupHeroAndAboutImages();
 });
 
 function loadGallery() {
     const featuredGallery = document.getElementById('featuredGallery');
     const galleryGrid = document.getElementById('galleryGrid');
 
-    // Featured gallery (first 6 images)
+    // Featured gallery (first 9 images)
     if (featuredGallery) {
-        const featured = images.slice(0, 6);
+        const featured = images.slice(0, 9);
         currentGalleryImages = featured;
         renderGallery(featuredGallery, featured);
     }
@@ -49,13 +54,24 @@ function loadGallery() {
     }
 }
 
+function getMasonryClass(index) {
+    if (index % 5 === 0) return 'masonry-item wide tall';
+    if (index % 4 === 2) return 'masonry-item wide';
+    return 'masonry-item';
+}
+
 function renderGallery(container, galleryImages) {
-    container.innerHTML = galleryImages.map((img, index) => `
-        <div class="gallery-item" onclick="openLightbox(${index})">
-            <img src="${img.src}" alt="${img.title}" loading="lazy">
-            <div class="gallery-item-title">${img.title}</div>
-        </div>
-    `).join('');
+    container.innerHTML = galleryImages
+        .map(
+            (img, index) => `
+                <div class="${getMasonryClass(index)}" onclick="openLightbox(${index})">
+                        <img src="${img.src}" alt="${img.title}" loading="lazy" onerror="handleImageError(this)">
+                        <div class="overlay"></div>
+                        <div class="caption">${img.title}</div>
+                </div>
+        `
+        )
+        .join('');
 }
 
 function openLightbox(index) {
@@ -64,7 +80,7 @@ function openLightbox(index) {
     const img = document.getElementById('lightbox-image');
     img.src = currentGalleryImages[index].src;
     img.alt = currentGalleryImages[index].title;
-    
+
     updateLightboxCounter();
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -117,33 +133,46 @@ function setupEventListeners() {
     }
 }
 
+function setupHeroAndAboutImages() {
+    const hero = document.getElementById('hero');
+    if (hero && images[0]) {
+        hero.style.backgroundImage = `url('${images[0].src}')`;
+    }
+
+    const aboutImage = document.getElementById('aboutImage');
+    if (aboutImage && images[1]) {
+        aboutImage.src = images[1].src;
+    }
+
+    const aboutPageImage = document.getElementById('aboutPageImage');
+    if (aboutPageImage && images[2]) {
+        aboutPageImage.src = images[2].src;
+    }
+}
+
+function handleImageError(img) {
+    img.onerror = null;
+    img.src = 'https://placehold.co/1200x900/111111/ffffff?text=Image';
+}
+
 // Contact form
 function handleSubmit(event) {
     event.preventDefault();
     const form = document.getElementById('contactForm');
     const messageDiv = document.getElementById('formMessage');
-    
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
 
-    // Log form data (in production, send to backend)
-    console.log({
-        name,
-        email,
-        subject,
-        message
-    });
+    console.log({ name, email, subject, message });
 
-    // Show success message
     messageDiv.textContent = 'Thank you! We\'ve received your message and will get back to you soon.';
     messageDiv.style.display = 'block';
-    
-    // Reset form
+
     form.reset();
 
-    // Hide message after 3 seconds
     setTimeout(() => {
         messageDiv.style.display = 'none';
     }, 3000);
