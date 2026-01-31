@@ -26,6 +26,13 @@ const images = [
     { id: 24, src: 'https://www.dropbox.com/scl/fi/omm89j74dthkq93brxgkk/Photo-024.jpg?rlkey=br4ad5nzl6arbqtngxgwkj9rk&st=mzjlht7w&dl=1', title: 'Premium Shot 24' },
 ];
 
+// Normalize Dropbox links for reliable direct image loading
+images.forEach((img) => {
+    img.src = img.src
+        .replace('dl=1', 'raw=1')
+        .replace('dl=0', 'raw=1');
+});
+
 let currentLightboxIndex = 0;
 let currentGalleryImages = [];
 
