@@ -264,12 +264,14 @@ h1, h2, h3, h4, h5, h6 {
 .masonry-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
+    background: var(--color-gray-850);
     transition: transform 0.7s ease;
 }
 
 .masonry-item:hover img {
-    transform: scale(1.05);
+    transform: none;
 }
 
 .masonry-item .overlay {
