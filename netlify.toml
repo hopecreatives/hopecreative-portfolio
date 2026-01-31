@@ -1,5 +1,6 @@
 [build]
-  command = ""
+  command = "mkdir -p _site/public && cp -R index.html works.html about.html contact.html styles.css script.js _site/ && cp -R public/assets _site/public/"
+  publish = "_site"
 
 [build.environment]
   NETLIFY_NEXT_PLUGIN_DISABLED = "true"
