@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HopeCreative - Premium Photography & Filmmaking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo">HopeCreative</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Premium Photography & Filmmaking</h1>
+            <p class="hero-subtitle">Capturing moments. Creating stories. Inspiring visions.</p>
+            <a href="works.html" class="cta-button">View Works →</a>
+        </div>
+    </section>
+
+    <!-- Featured Gallery -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured Work</h2>
+            <div class="gallery-grid" id="featuredGallery">
+                <!-- Images will load here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 HopeCreative. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="mailto:contact@hopecreative.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-image" src="" alt="">
+            <button class="lightbox-prev" onclick="prevImage()">← Prev</button>
+            <button class="lightbox-next" onclick="nextImage()">Next →</button>
+            <div class="lightbox-counter">
+                <span id="current-image">1</span> / <span id="total-images">1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
