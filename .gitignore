@@ -1,0 +1,14 @@
+.next
+node_modules
+.env.local
+.env.*.local
+*.pem
+.DS_Store
+.idea
+.vscode
+dist
+build
+coverage
+.turbo
+.vercel
+public/assets/images/
