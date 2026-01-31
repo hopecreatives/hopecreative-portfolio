@@ -67,7 +67,7 @@ export default function Contact() {
               Get In Touch
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl">
-              Have a project in mind? Let's collaborate and create something extraordinary together.
+              Have a project in mind? Let&apos;s collaborate and create something extraordinary together.
             </p>
           </motion.div>
         </div>
@@ -163,7 +163,7 @@ export default function Contact() {
                     <div className="text-5xl mb-4">✓</div>
                     <h3 className="text-2xl font-serif font-bold mb-2">Thank You!</h3>
                     <p className="text-gray-400">
-                      We've received your message and will get back to you soon.
+                      We&apos;ve received your message and will get back to you soon.
                     </p>
                   </div>
                 </motion.div>

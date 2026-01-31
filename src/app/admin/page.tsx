@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import Section from '@/components/Section'
 import OptimizedImage from '@/components/OptimizedImage'
@@ -37,18 +37,12 @@ export default function AdminPage() {
     }
   }, [])
 
-  useEffect(() => {
-    if (isAuthed) {
-      fetchImages()
-    }
-  }, [isAuthed])
-
   const headers = useMemo(() => ({
     'x-admin-key': adminKey,
     'content-type': 'application/json',
   }), [adminKey])
 
-  const fetchImages = async () => {
+  const fetchImages = useCallback(async () => {
     if (!adminKey) return
     setLoading(true)
     setError('')
@@ -64,7 +58,13 @@ export default function AdminPage() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [adminKey])
+
+  useEffect(() => {
+    if (isAuthed) {
+      fetchImages()
+    }
+  }, [fetchImages, isAuthed])
 
   const handleLogin = () => {
     if (!adminKey) return
