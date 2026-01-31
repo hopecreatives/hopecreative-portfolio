@@ -54,22 +54,18 @@ function loadGallery() {
     }
 }
 
-function getMasonryClass(index) {
-    if (index % 5 === 0) return 'masonry-item wide tall';
-    if (index % 4 === 2) return 'masonry-item wide';
+function getMasonryClass() {
     return 'masonry-item';
 }
 
 function renderGallery(container, galleryImages) {
     container.innerHTML = galleryImages
         .map(
-            (img, index) => `
-                <div class="${getMasonryClass(index)}" onclick="openLightbox(${index})">
-                        <img src="${img.src}" alt="${img.title}" loading="lazy" onerror="handleImageError(this)">
-                        <div class="overlay"></div>
-                        <div class="caption">${img.title}</div>
+                (img, index) => `
+                <div class="${getMasonryClass()}" onclick="openLightbox(${index})">
+                    <img src="${img.src}" alt="${img.title}" loading="lazy" onerror="handleImageError(this)">
                 </div>
-        `
+            `
         )
         .join('');
 }
